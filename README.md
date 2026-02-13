@@ -1,22 +1,21 @@
-# Old Laptop HomeLab: Nextcloud on Lubuntu
+# 🚀 Old Laptop HomeLab: Nextcloud on Lubuntu
 
-This project demonstrates how to repurpose an old laptop into a functional home server (HomeLab). The goal is to gain hands-on experience with Linux server administration, Docker containerization, and self-hosted cloud services.
+This project demonstrates the transformation of a 15-year-old laptop into a fully functional, modern home server (HomeLab). By leveraging lightweight Linux distributions and containerization, I've created a private cloud environment for file storage and collaboration.
 
-## 🖥️ Hardware Specs
-- **Model:** Toshiba Satellite P300 
-- **OS:** Lubuntu (Lightweight Ubuntu flavor for better performance on legacy hardware)
+## 🖥️ Hardware Specifications
+- **Model:** Toshiba Satellite P300 (Chris's Edition)
+- **OS:** Lubuntu (Chosen for its minimal LXQt desktop and low resource footprint)
+- **Status:** Active HomeLab Server
 
-## 🚀 Tech Stack
+## 🏗️ Tech Stack
 - **Containerization:** Docker & Docker Compose (V2)
-- **Cloud Service:** Nextcloud (Self-hosted file storage and collaboration)
+- **Cloud Service:** Nextcloud (Self-hosted personal cloud)
 - **Database:** MariaDB 10.6
-- **Architecture:** Infrastructure as Code (IaC) via Docker Compose
+- **Architecture:** Infrastructure as Code (IaC)
 
-## 🛠️ Installation & Setup
-To deploy this setup, I used the following `docker-compose.yml` configuration:
+## 🛠️ Implementation Details
+The server is orchestrated using Docker Compose. This allows for easy deployment, scalability, and portability.
 
-1. Installed Docker and the Docker Compose V2 plugin on Lubuntu.
-2. Configured user permissions to run Docker without sudo for better workflow.
-3. Deployed the stack using:
-   ```bash
-   docker compose up -d
+### Deployment Command:
+```bash
+docker compose up -d
