@@ -1,44 +1,27 @@
-version: '3'
+# 🚀 Old Laptop HomeLab: Nextcloud & Portainer on Lubuntu
 
-services:
-  db:
-    image: mariadb:10.6
-    restart: always
-    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
-    volumes:
-      - db_data:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_PASSWORD=1234
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
+This project demonstrates the transformation of a 15-year-old laptop into a fully functional, modern home server (HomeLab). By leveraging lightweight Linux distributions and containerization, I've created a private cloud environment for file storage and a web-based management interface for Docker.
 
-  app:
-    image: nextcloud
-    restart: always
-    ports:
-      - "8080:80"
-    volumes:
-      - nextcloud_data:/var/www/html
-    environment:
-      - MYSQL_PASSWORD=1234
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
-      - MYSQL_HOST=db
-    depends_on:
-      - db
+## 🖥️ Hardware Specifications
+- **Model:** Toshiba Satellite P300
+- **OS:** Lubuntu (Chosen for its minimal LXQt desktop and low resource footprint)
+- **Status:** Active HomeLab Server
 
-  portainer:
-    image: portainer/portainer-ce:latest
-    container_name: portainer
-    restart: always
-    ports:
-      - "9443:9443"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
+## 🏗️ Tech Stack
+- **Containerization:** Docker & Docker Compose (V2)
+- **Cloud Service:** Nextcloud (Self-hosted personal cloud)
+- **Database:** MariaDB 10.6
+- **Management UI:** Portainer CE (Container monitoring & management)
+- **Architecture:** Infrastructure as Code (IaC)
 
-volumes:
-  db_data:
-  nextcloud_data:
-  portainer_data:
+## 🛠️ Implementation Details
+The server is orchestrated using Docker Compose. This allows for easy deployment, scalability, and portability.
+
+### Services Overview:
+1. **Nextcloud:** Accessible via port `8080`.
+2. **MariaDB:** Backend database for Nextcloud storage.
+3. **Portainer:** Management GUI accessible via port `9443` (HTTPS).
+
+### Deployment Command:
+```bash
+docker compose up -d
