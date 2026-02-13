@@ -3,7 +3,7 @@
 This project demonstrates how to repurpose an old laptop into a functional home server (HomeLab). The goal is to gain hands-on experience with Linux server administration, Docker containerization, and self-hosted cloud services.
 
 ## 🖥️ Hardware Specs
-- **Model:** Toshiba Satellite P300 (Chris's Edition)
+- **Model:** Toshiba Satellite P300 
 - **OS:** Lubuntu (Lightweight Ubuntu flavor for better performance on legacy hardware)
 
 ## 🚀 Tech Stack
