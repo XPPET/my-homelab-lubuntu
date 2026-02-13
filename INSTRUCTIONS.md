@@ -49,6 +49,9 @@ Once the containers are running, access the Web UIs:
 During the initial setup, use these credentials:
 
   Database User: nextcloud
+  
   Database Password: 1234
+  
   Database Name: nextcloud
+  
   Database Host: db
