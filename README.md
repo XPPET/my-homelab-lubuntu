@@ -3,7 +3,7 @@
 This project demonstrates the transformation of a 15-year-old laptop into a fully functional, modern home server (HomeLab). By leveraging lightweight Linux distributions and containerization, I've created a private cloud environment for file storage and collaboration.
 
 ## 🖥️ Hardware Specifications
-- **Model:** Toshiba Satellite P300 (Chris's Edition)
+- **Model:** Toshiba Satellite P300
 - **OS:** Lubuntu (Chosen for its minimal LXQt desktop and low resource footprint)
 - **Status:** Active HomeLab Server
 
